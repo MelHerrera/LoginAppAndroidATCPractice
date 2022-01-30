@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent()
             intent.putExtra("UserName", userNameEditText.text.toString())
             intent.putExtra("Password", passwordEditText.text.toString())
-            intent.action = "testlogin"
+            intent.setClassName("com.example.loginapp", "com.example.loginapp.IntentReceiverActivity")
             intent.addCategory(Intent.CATEGORY_DEFAULT)
             startActivity(intent)
         }
